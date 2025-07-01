@@ -1,5 +1,7 @@
 const mongoose=require('mongoose');
-const mongoURL='mongodb://localhost:27017/menu'//mydatabase is the name we want to give to database
+require('dotenv').config();
+const mongoURL = process.env.DB_URL;
+//mydatabase is the name we want to give to database
 mongoose.connect(mongoURL,{
 useNewUrlParser:true,
 useUnifiedTopology:true
